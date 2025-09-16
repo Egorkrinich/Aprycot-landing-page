@@ -207,7 +207,7 @@ header {
 .Grid__wrapper::after {
     content: '';
     position: absolute;
-    background: url(../Icons/MainIcons/Lines.svg) no-repeat;
+    background: url(../Icons/Lines.svg) no-repeat;
     top: 600px;
     left: 0;
     z-index: -100;
@@ -1127,4 +1127,5 @@ footer .Privacy {
     .Trending__card {
         width: 250px;
     }
+
 }
