@@ -1,7 +1,7 @@
 # Portfolio-project-1
 Aprycot landing page built with HTML, CSS and JavaScript
 
-[Open](https://Egorkrinich.github.io/Portfolio-project-1/)
+[Open](https://egorkrinich.github.io/Aprycot-landing-page/)
 
 - Technology
 - HTML5
