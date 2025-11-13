@@ -131,6 +131,7 @@ header {
     
     padding: 30px 0;
     background: var(--main-background);
+    z-index: 10;
 }
 .Sidebar__nav {
     display: flex;
@@ -833,7 +834,7 @@ footer .Privacy {
     border-bottom: 1px solid var(--primary-grey);
     padding-bottom: 5px;
 }
-.Footer__devs a {
+.footer__credits a {
     color: var(--primary-orange);
 }
 .Footer__instagram .instagram__icon,

@@ -40,7 +40,7 @@
                     <path d="M10.7518 10.7234L12.8333 12.7501" stroke="#959895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
-            <div class="Search__input" data-menu="search">
+            <div class="Search__input" data-menu="search" data-menu-overlay="false">
                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <ellipse cx="7.05916" cy="6.84959" rx="5.30919" ry="5.18278" stroke="#959895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M10.7518 10.7234L12.8333 12.7501" stroke="#959895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -151,8 +151,8 @@
                 </ul>
             </nav>
         </aside>
-        <div class="overlay" data-overlay='burger' data-overlay='Cart'></div>
-        <div class="Burger__menu" data-menu='burger'>
+        <div class="overlay" data-overlay='global'></div>
+        <div class="Burger__menu" data-menu='burger' data-menu-overlay="true">
             <div class="Burger__header">
                 <img src="./Icons/Bigger_Logo.svg" alt="Logo">
             </div>
@@ -168,7 +168,7 @@
                             <span class="nav__titles Dashboard__title">
                                 Dashboard
                             </span>
-                        </abutton>
+                        </button>
                     </li>
                     
                     <li class="Separator"></li>
@@ -565,10 +565,10 @@
                     </div>
                 </div>
             </div>
-            <div class="Cart" data-menu="Cart">
+            <div class="Cart" data-menu="Cart" data-menu-overlay="true">
                 <div class="Cart__header">
                     <h4 class="Cart__title">My Cart</h4>
-                    <div class="Mobile-only Cart-close__button" data-button="Cart">
+                    <div class="Mobile-only Cart-close__button" data-close-button="Cart">
                         <svg width="24" height="24" viewBox="0 0 24 24">
                           <line x1="0" y1="0" x2="24" y2="24" stroke="black" stroke-width="2"/>
                           <line x1="24" y1="0" x2="0" y2="24" stroke="black" stroke-width="2"/>
@@ -874,7 +874,7 @@
             <a class="Privacy" href="#" >Privacy Policy</a>
             <a class="Terms" href="#">Terms of Use</a>
         </div>
-        <div class="Footer__devs">
+        <div class="footer__credits">
             <div class="Design">
                 <p class="Copyright">© 2021 Aprycot, Made with ❤ by <a href="https://iqonic.design/" target="_blank" rel="noopener noreferrer" class="footer__link">IQONIC Design.</a></p>
                 <div class="Footer__instagram">

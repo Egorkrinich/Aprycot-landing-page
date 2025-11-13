@@ -1,66 +1,102 @@
-const burgerButtons = document.querySelectorAll('.Burger__button')
+class Menu {
+    constructor(attribute, isOverlay) {
+        this.menu = document.querySelector(`[data-menu="${attribute}"]`)
+        this.button = document.querySelector(`[data-button="${attribute}"]`)
+        this.closeButton = 
+        document.querySelector(`[data-close-button="${attribute}"]`)
 
-burgerButtons.forEach((button) => {
-    button.addEventListener('click', ()=> {
-        const activeBtn = document.querySelector('.Burger__button.active')
+        if (isOverlay) 
+        this.overlay = document.querySelector(`[data-overlay="global"]`)
 
-        if (activeBtn && activeBtn !== button) {
-            activeBtn.classList.remove('active')
-        }
-        button.classList.toggle('active')
-    })
-})
+        this.isMenuActive = false
 
-    // Accordion
-const accordionButtons = document.querySelectorAll('.Accordion__button')
-
-accordionButtons.forEach((el) => {
-    el.addEventListener('click', () => {
-        const content = el.nextElementSibling
-        
-        if (content.style.maxHeight) {
-            document.querySelectorAll('.Accordion__content').forEach((el) => {
-                el.style.maxHeight = null
-            })
-        } else {
-             document.querySelectorAll('.Accordion__content').forEach((el) => {
-                el.style.maxHeight = null
-            })
-            content.style.maxHeight = content.scrollHeight + 'px'
-            
-        }      
-    })
-})
-    // Menus
-const buttons = document.querySelectorAll('[data-button]')
-
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const clickTarget = btn.dataset.button
-
-        const menus = document.querySelectorAll(`[data-menu="${clickTarget}"]`)
-        const overlays = document.querySelectorAll(`[data-overlay="${clickTarget}"]`)
-
-        menus.forEach(menu => menu.classList.toggle('active'))
-        overlays.forEach(overlay => overlay.classList.toggle('active'))
-    })
-})
-
-document.addEventListener('click', (e) => {
-  const activeMenus = document.querySelectorAll('[data-menu].active')
-
-  activeMenus.forEach(menu => {
-    const target = menu.dataset.menu
-    const button = document.querySelector(`[data-button="${target}"]`)
-    const overlay = document.querySelector(`[data-overlay="${target}"]`)
-
-    if (!menu.contains(e.target) &&
-        !button.contains(e.target)
-        ) 
-        {
-      menu.classList.remove('active')
-      overlay.classList.remove('active')
+        this.activeLogic()
     }
-  })
+    activeLogic() {
+        this.overlay?.addEventListener('click', () => {
+            this.classManager('close')
+        })
+        this.closeButton?.addEventListener('click', () => {
+            this.classManager('close')
+        })
+        this.button.addEventListener('click', () => {
+            this.classManager(this.isMenuActive ? 'close' : 'open')
+        })
+        document.addEventListener('keyup', (e) => {
+            if (e.code === 'Escape' && this.isMenuActive) {
+                this.classManager('close')
+            }
+        })
+    }
+    classManager(status) {
+        this.isMenuActive = !this.isMenuActive
+        const eventStatus = status === 'open'
+        const array = [this.menu, this.button, this.overlay]
+        array.forEach((el) => {
+            el?.classList.toggle('active', eventStatus)
+        })
+    }
+}
+const menus = document.querySelectorAll('[data-menu]')
+.forEach((menu) => {
+    new Menu(menu.dataset.menu, menu.dataset.menuOverlay === 'true')
 })
+class AccordionList {
+    constructor(list, accButton, accContent, button) {
+        this.container = document.querySelector(`.${list}`)
+        // Accordion
+        this.accContents = this.container.querySelectorAll(`.${accContent}`)
+        // Classes
+        this.accButtonClass = accButton
+        this.accContentClass = accContent
+        // Toggle Buttons
+        this.buttons = this.container.querySelectorAll(`.${button}`)
+        // Classes
+        this.buttonClass = button
 
+        this.startListener()
+    }
+    startListener() {
+        this.container.addEventListener('click', (e) => {
+            const accButton = e.target.closest(`.${this.accButtonClass}`)
+            if (accButton) {
+                this.openAccordion(accButton)
+            }
+            const button = e.target.closest(`.${this.buttonClass}`)
+            if (button) {
+                this.toggleActive(button)
+                if (!button.classList.contains(`${this.accButtonClass}`)) {
+                    this.closeAccordions()
+                }
+            }
+        })
+    }
+    openAccordion(accButton) {
+        const content = accButton.nextElementSibling
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null
+        } else {
+            this.closeAccordions()
+            content.style.maxHeight = content.scrollHeight + 'px'
+        }
+    }
+    closeAccordions() {
+        this.accContents.forEach((content) => {
+                content.style.maxHeight = null
+            })
+    }
+    toggleActive(thisButton) {
+        const activeButton = 
+        this.container.querySelector(`.${this.buttonClass}.active`)
+
+        if (activeButton && activeButton !== thisButton) {
+            activeButton.classList.remove('active')
+        }
+        thisButton.classList.toggle('active')
+    }
+}
+new AccordionList(
+    'Burger__nav', 'Accordion__button', 'Accordion__content',
+    'Burger__button'
+)
