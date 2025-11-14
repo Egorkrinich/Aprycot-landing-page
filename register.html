@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/register.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta name="google" content="notranslate">
+
+    <title>Aprycot Restaurant – Fresh & Tasty</title>
+    <meta name="description" content="Order fresh food online with fast delivery. Pizza, burgers, salads, and more.">
+
+    <!-- Favicon -->
+
+    <link rel="icon" type="image/png" href="./Favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./Favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./Favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Aprycot" />
+    <link rel="manifest" href="./Favicon/site.webmanifest" />
+
+</head>
+<body>
+    <main class="auth-page">
+    <section class="left-side">
+        <div class="side-container">
+            <header class="left__header">
+                <div class="header__image">
+                    <img src="./Icons/Bigger_Logo.svg" alt="Logo">
+                </div>
+                <div class="header__text">
+                    <h1 class="header__title">
+                        Sign up
+                    </h1>
+                    <p class="header__subtitle">
+                        Create your Hope UI account
+                    </p>
+                </div>
+            </header>
+            <form action="/registration" id="regForm" novalidata data-form>
+            <div class="firstName-field field">
+                <label for="firstName">First Name</label>
+                <input
+                class="field__input"
+                id="firstName"
+                name="firstName"
+                type="text"
+                minlength="3"
+                maxlength="10"
+                aria-errormessage="firstName-error"
+                required
+                >
+                <div 
+                class="error-container" 
+                id="firstName-error" 
+                data-form-errors-field>
+
+                </div>
+            </div>
+            <div class="lastName-field field">
+                <label for="lastName">Last Name</label>
+                <input
+                class="field__input"
+                id="lastName"
+                name="lastName"
+                type="text"
+                minlength="3"
+                maxlength="10"
+                aria-errormessage="lastName-error"
+                required
+                >
+                <div 
+                class="error-container" 
+                id="lastName-error" 
+                data-form-errors-field>
+                
+                </div>
+            </div>
+            <div class="email-field field">
+                <label for="email">Email</label>
+                <input
+                class="field__input"
+                id="email"
+                name="email"
+                type="email"
+                aria-errormessage="email-error"
+                required
+                >
+                <div 
+                class="error-container" 
+                id="email-error" 
+                data-form-errors-field>
+                
+                </div>
+            </div>
+            <div class="phone-field field">
+                <label for="phone">Phone No.</label>
+                <input
+                class="field__input"
+                id="phone"
+                name="phone"
+                type="tel"
+                aria-errormessage="phone-error"
+                pattern="^(\+1\d{10}|\+44\d{10}|\+61\d{9})$"
+                required
+                >
+                <div 
+                class="error-container" 
+                id="phone-error" 
+                data-form-errors-field>
+                
+                </div>
+            </div>
+            <div class="password-field field">
+                <label for="password">Password</label>
+                <input
+                class="field__input"
+                id="password"
+                name="password"
+                type="password"
+                aria-errormessage="password-error"
+                pattern="(?=.*\d)(?=.*[a-z]).{8,16}"
+                title="Пароль должен содержать от 8 до 16 символов, и как минимум 1 цифру и 1 букву"
+                required
+                >
+                <div 
+                class="error-container" 
+                id="password-error" 
+                data-form-errors-field>
+                
+                </div>
+            </div>
+            <div class="passwordConfirm-field field">
+                <label for="passwordConfirm">Confirm Password</label>
+                <input
+                class="field__input"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                type="password"
+                aria-errormessage="passwordConfirm-error"
+                pattern="(?=.*\d)(?=.*[a-z]).{8,16}"
+                title="Пароль должен содержать от 8 до 16 символов, и как минимум 1 цифру и 1 букву"
+                required
+                >
+                <div 
+                class="error-container" 
+                id="passwordConfirm-error" 
+                data-form-errors-field>
+                
+                </div>
+            </div>
+            <div class="agreement-field">
+                <input
+                class="checkbox__input"
+                id="agreement"
+                name="agreement"
+                type="checkbox"
+                aria-errormessage="agreement-error"
+                required
+                >
+                <label 
+                class="field__label checkbox__label"
+                for="agreement">I agree with the terms of use</label>
+
+                <div class="error-container" id="agreement-error" data-form-errors-field>
+                </div>
+            </div>
+            <button type="submit" id="SignUp">Sign up</button>
+            </form>
+        </div>
+    </section>
+    <section class="right-side">
+
+    </section>
+    </main>
+    <script src="./Scripts/register.js"></script>
+</body>
+</html>

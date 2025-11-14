@@ -1,0 +1,111 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;600&display=swap'); */
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+:root {
+    --main-background: #ffffff;
+    --main-content-background: #ffffff;
+    --primary-orange: #EA6A12;
+    --primary-grey: #959895;
+    --arrows-lines: #E3E1E1;
+    --button-background: #F5F5F5;
+}
+body {
+    background: #fdf3eb;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+a {
+    color: #000000;
+}
+img {
+    max-width: 100%;
+}
+h1 {
+    font-size: 40px;
+    font-family: 'Playfair', serif;
+}
+.auth-page {
+    display: flex;
+    height: 100vh;
+}
+.left-side, .right-side {
+    flex: 1;
+}
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+    padding-left: 300px;
+    box-sizing: border-box;
+}
+.side-container {
+    max-width: 500px;
+}
+.header__text {
+    display: flex;
+    gap: 10px;
+    margin-block: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.header__subtitle {
+    color: #959895;
+}
+#regForm {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: center;
+    gap: 20px 50px;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    color: #959895;
+}
+.field input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #EA6A12;
+    border-radius: 25px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.agreement-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #959895;
+    width: 100%;
+}
+.agreement-field input{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.error-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 5px;
+    font-size: 0.7em;
+    color: red;
+}
+#SignUp {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background: var(--primary-orange);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s;
+}
