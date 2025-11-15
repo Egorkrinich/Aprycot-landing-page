@@ -39,7 +39,7 @@
                     </p>
                 </div>
             </header>
-            <form action="/registration" id="regForm" novalidata data-form>
+            <form action="/registration" id="regForm" novalidate data-form>
             <div class="firstName-field field">
                 <label for="firstName">First Name</label>
                 <input
@@ -51,6 +51,7 @@
                 maxlength="10"
                 aria-errormessage="firstName-error"
                 required
+                data-form-input
                 >
                 <div 
                 class="error-container" 
@@ -70,6 +71,7 @@
                 maxlength="10"
                 aria-errormessage="lastName-error"
                 required
+                data-form-input
                 >
                 <div 
                 class="error-container" 
@@ -87,6 +89,7 @@
                 type="email"
                 aria-errormessage="email-error"
                 required
+                data-form-input
                 >
                 <div 
                 class="error-container" 
@@ -105,6 +108,7 @@
                 aria-errormessage="phone-error"
                 pattern="^(\+1\d{10}|\+44\d{10}|\+61\d{9})$"
                 required
+                data-form-input
                 >
                 <div 
                 class="error-container" 
@@ -122,8 +126,9 @@
                 type="password"
                 aria-errormessage="password-error"
                 pattern="(?=.*\d)(?=.*[a-z]).{8,16}"
-                title="Пароль должен содержать от 8 до 16 символов, и как минимум 1 цифру и 1 букву"
+                title="Password must be between 8 and 16 characters, with at least 1 number and 1 letter."
                 required
+                data-form-input
                 >
                 <div 
                 class="error-container" 
@@ -140,9 +145,9 @@
                 name="passwordConfirm"
                 type="password"
                 aria-errormessage="passwordConfirm-error"
-                pattern="(?=.*\d)(?=.*[a-z]).{8,16}"
-                title="Пароль должен содержать от 8 до 16 символов, и как минимум 1 цифру и 1 букву"
+                title="Password"
                 required
+                data-form-input
                 >
                 <div 
                 class="error-container" 
@@ -159,6 +164,7 @@
                 type="checkbox"
                 aria-errormessage="agreement-error"
                 required
+                data-form-input
                 >
                 <label 
                 class="field__label checkbox__label"
@@ -172,7 +178,9 @@
         </div>
     </section>
     <section class="right-side">
-
+        <div class="welcome__container">
+            <img src="./Image/Register-welcome.png" alt="">
+        </div>
     </section>
     </main>
     <script src="./Scripts/register.js"></script>

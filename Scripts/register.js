@@ -5,10 +5,17 @@ class FormsValidation {
         this.bindEvents();
     }
     errorMessageVariation = {
-        valueMissing: () => 'Заполните это поле',
-        patternMismatch: ({title}) => title || 'Данные не соответствуют формату',
-        tooShort: ({minLength}) => `Минимальное количество символов - ${minLength}`,
-        tooLong: ({maxLength}) => `Максимальное количество символов - ${maxLength}`,
+        valueMissing: ({name}) => {
+            if (name === 'agreement') {
+                return 'You must agree to the terms'
+            } else {
+                return 'This field is required'
+            }
+        },
+        patternMismatch: ({title}) => title || 'Please enter a valid value.',
+        tooShort: ({minLength}) => `The value must be at least ${minLength} characters long`,
+        tooLong: ({maxLength}) => `The value cannot exceed ${maxLength} characters`,
+        customError: () => 'Passwords do not match'
     }
     manageErrors(fieldInputElement, errorMessages) {
         const errorsFieldElement = 
@@ -23,16 +30,25 @@ class FormsValidation {
         
         const errorMessages = []
 
+        if (fieldInputElement.name === 'passwordConfirm') {
+            if (this.form.password.value ===
+                fieldInputElement.value) {
+                    fieldInputElement.setCustomValidity('')
+                } else {
+                    fieldInputElement.setCustomValidity('Passwords do not match')
+                }
+        }
         Object.entries(this.errorMessageVariation)
         .forEach(([errorType, getErrorMessage]) => {
             if (errors[errorType]) {
                 errorMessages.push(getErrorMessage(fieldInputElement))
             }
         })
+        
         this.manageErrors(fieldInputElement, errorMessages)
         const isValid = errorMessages.length === 0
 
-        fieldInputElement.ariaInvalid = !isValid
+        fieldInputElement.setAttribute('aria-invalid', !isValid)
         
         fieldInputElement.classList.toggle('invalid', !isValid)
         
@@ -59,8 +75,15 @@ class FormsValidation {
         if (!isFormValid) {
             e.preventDefault()
             firstInvalidFieldInput.focus()
+        } else {
+            e.preventDefault()
+            this.saveData()
         }
         
+    }
+    saveData() {
+        const data = Object.fromEntries(new FormData(this.form))
+        localStorage.setItem('userData', JSON.stringify(data))
     }
     onChange(e) {
         const isToggleType = ['radio', 'checkbox'].includes(e.target.type)
@@ -81,3 +104,29 @@ class FormsValidation {
     } 
 }
 new FormsValidation('[data-form]')
+class FormSessionSave {
+    constructor(form) {
+        this.form = document.querySelector(`${form}`)
+        this.formInputs = this.form.querySelectorAll(`[data-form-input]`)
+
+        this.sessionCheck()
+        this.bindInputEvent()
+    }
+    sessionCheck() {
+        this.formInputs.forEach((input) => {
+            const inputValue = sessionStorage.getItem(`${this.form.id}-${input.name}`)
+            if (inputValue !== null) {
+                input.value = inputValue
+            }
+        })
+    }
+    bindInputEvent() {
+        this.formInputs.forEach((input) => {
+            input.addEventListener('change', () => {
+                sessionStorage.setItem(`${this.form.id}-${input.name}`, input.value)
+            })
+        })
+    }
+}
+new FormSessionSave('[data-form]')
+
