@@ -84,7 +84,7 @@ class FormsValidation {
     saveData() {
         const data = Object.fromEntries(new FormData(this.form))
         localStorage.setItem('userData', JSON.stringify(data))
-        window.location = '/'
+        window.location = 'index.html'
     }
     onChange(e) {
         const isToggleType = ['radio', 'checkbox'].includes(e.target.type)
