@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (userData) {
         new RenderUserData(userData,'data-userName')
     } else {
-        window.location = '/register.html'
+        window.location = 'register.html'
     }
 })
 
