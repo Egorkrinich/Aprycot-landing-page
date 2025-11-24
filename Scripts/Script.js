@@ -125,12 +125,15 @@ class RenderUserData {
     }
 }
 // Is user register
-const userData = localStorage.getItem('userData')
-if (userData) {
-    new RenderUserData(userData,'data-userName')
-} else {
-    window.location = '/register.html'
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const userData = localStorage.getItem('userData')
+    if (userData) {
+        new RenderUserData(userData,'data-userName')
+    } else {
+        window.location = '/register.html'
+    }
+})
+
 class Tab {
     constructor(container, button, content) {
         this.container = document.querySelector(`.${container}`)
