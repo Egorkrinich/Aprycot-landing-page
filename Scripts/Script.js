@@ -1,7 +1,7 @@
 class Menu {
     constructor(attribute, isOverlay) {
         this.menu = document.querySelector(`[data-menu="${attribute}"]`)
-        this.button = document.querySelector(`[data-button="${attribute}"]`)
+        this.button = document.querySelector(`[data-burger-btn="${attribute}"]`)
         this.closeButton = 
         document.querySelector(`[data-close-button="${attribute}"]`)
 
@@ -44,11 +44,12 @@ const menus = document.querySelectorAll('[data-menu]')
 class AccordionList {
     constructor(list, accButton, accContent, button) {
         this.container = document.querySelector(`.${list}`)
-        // Accordion
-        this.accContents = this.container.querySelectorAll(`.${accContent}`)
+        // Accordion content
+        this.accContents = this.container.querySelectorAll(`[${accContent}]`)
         // Classes
-        this.accButtonClass = accButton
-        this.accContentClass = accContent
+        this.accButtonData = accButton
+        this.accContentData = accContent
+
         // Toggle Buttons
         this.buttons = this.container.querySelectorAll(`.${button}`)
         // Classes
@@ -58,14 +59,14 @@ class AccordionList {
     }
     startListener() {
         this.container.addEventListener('click', (e) => {
-            const accButton = e.target.closest(`.${this.accButtonClass}`)
+            const accButton = e.target.closest(`[${this.accButtonData}]`)
             if (accButton) {
                 this.openAccordion(accButton)
             }
             const button = e.target.closest(`.${this.buttonClass}`)
             if (button) {
                 this.toggleActive(button)
-                if (!button.classList.contains(`${this.accButtonClass}`)) {
+                if (!button.hasAttribute(`${this.accButtonData}`)) {
                     this.closeAccordions()
                 }
             }
@@ -88,7 +89,8 @@ class AccordionList {
     }
     toggleActive(thisButton) {
         const activeButton = 
-        this.container.querySelector(`.${this.buttonClass}.active`)
+        Array.from(this.buttons)
+        .find((button) => button.classList.contains('active'))
 
         if (activeButton && activeButton !== thisButton) {
             activeButton.classList.remove('active')
@@ -97,6 +99,76 @@ class AccordionList {
     }
 }
 new AccordionList(
-    'Burger__nav', 'Accordion__button', 'Accordion__content',
-    'Burger__button'
+    'burger__nav', 'data-accordion-button', 'data-accordion-content',
+    'burger__button'
 )
+class RenderUserData {
+    constructor(data, name) {
+        this.data = JSON.parse(data)
+        this.name = document.querySelectorAll(`[${name}]`)
+
+        this.renderRequest()
+    }
+    renderRequest() {
+        // Name
+        this.setName(
+            this.data.firstName,
+            this.data.lastName
+        )
+        // ...
+        
+    }
+    setName(firstName, lastName) {
+        this.name.forEach((el) => {
+            el.textContent = `${firstName} ${lastName}`
+        })
+    }
+}
+// Is user register
+const userData = localStorage.getItem('userData')
+if (userData) {
+    new RenderUserData(userData,'data-userName')
+} else {
+    window.location = '/register.html'
+}
+class Tab {
+    constructor(container, button, content) {
+        this.container = document.querySelector(`.${container}`)
+        this.contents = document.querySelectorAll(`.${content}`)
+        this.buttonAttr = button
+
+        this.startListener()
+        this.setFirstTab()
+    }
+    setFirstTab() {
+        const button = this.container.firstElementChild
+        this.buttonManager(button)
+        this.contentManager(button)
+    }
+    startListener() {
+            this.container.addEventListener('click', (e) => {
+                const button = e.target.closest(`[${this.buttonAttr}]`)
+                if (!button) return
+                this.buttonManager(button)
+                this.contentManager(button)
+            })
+    }
+    buttonManager(button) {
+        [...this.container.children]
+        .forEach((button) => {
+            button.classList.remove('active')
+        })
+        button.classList.add('active')
+    }
+    contentManager(button) {
+        this.contents.forEach((content) => {
+            content.classList.toggle('active', 
+            content.dataset.tabContent === button.dataset.tabButton)
+        })
+    }
+    
+}
+if (window.location.pathname === '/profile.html') {
+    new Tab('profile__tab-container', 'data-tab-button', 'profile__tab-content')
+
+}
