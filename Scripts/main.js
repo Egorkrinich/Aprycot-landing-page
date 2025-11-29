@@ -5,12 +5,13 @@ import RenderProfile from "./Modules/RenderProfile.js"
 import RenderUserData from "./Modules/RenderUserData.js"
 import Tab from "./Modules/Tabs.js"
 
+const path = window.location.pathname
 
-if (window.location.pathname === "/") {
+if (path.endsWith('/') || path.endsWith('/index.html')) {
     new RenderContent('trending__content', 'trending', true, 8)
     new RenderContent('dishes', 'menuCategory', false, 4)
 }
-if (window.location.pathname === '/profile.html') {
+if (path.endsWith('/profile.html')) {
     new Tab('profile__tab-container', 'data-tab-button', 'profile__tab-content')
     new RenderProfile(new URL(window.location.href).searchParams.get('id'))
 }
@@ -29,7 +30,7 @@ const profiles = document.querySelectorAll('[data-profile-container]')
 profiles.forEach((profile) => {
     profile.addEventListener('click', (e) => {
         e.preventDefault()
-        window.location = `profile.html?id=${e.currentTarget.dataset.userId}`
+        window.location = `./profile.html?id=${e.currentTarget.dataset.userId}`
     })
 })
 // Is user register
