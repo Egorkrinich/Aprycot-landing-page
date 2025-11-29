@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "label": null,
+        "title": "Buttery Pork Belly",
+        "calories": 600,
+        "persons": 1,
+        "cost": 15,
+        "img": "../Image/Food/Buttery-Pork-Belly.png"
+    },
+    {
+        "id": 2,
+        "label": "Top of the week",
+        "title": "Cheese Mix Pizza",
+        "calories": 700,
+        "persons": 3,
+        "cost": 11,
+        "img": "../Image/Food/Cheese-Mix-Pizza.png"
+    },
+    {
+        "id": 3,
+        "label": "Top of the day",
+        "title": "Chocolate Cupcake",
+        "calories": 350,
+        "persons": 1,
+        "cost": 4,
+        "img": "../Image/Food/Chocolate-Cupcake.png"
+    },
+    {
+        "id": 4,
+        "label": "Top of the month",
+        "title": "Chocolate Mousse",
+        "calories": 250,
+        "persons": 1,
+        "cost": 5,
+        "img": "../Image/Food/Chocolate-Mousse.png"
+    },
+    {
+        "id": 5,
+        "label": null,
+        "title": "Creamy Pumpkin Soup",
+        "calories": 250,
+        "persons": 1,
+        "cost": 6,
+        "img": "../Image/Food/Creamy-Pumpkin-Soup.png"
+    },
+    {
+        "id": 6,
+        "label": "Top of the day",
+        "title": "Spaghetti Primavera",
+        "calories": 550,
+        "persons": 1,
+        "cost": 12,
+        "img": "../Image/Food/Spaghetti-Primavera.jpg"
+    },
+    {
+        "id": 7,
+        "label": null,
+        "title": "Grilled Beef Burger",
+        "calories": 750,
+        "persons": 1,
+        "cost": 11,
+        "img": "../Image/Food/Grilled-Beef-Burger.jpg"
+    },
+    {
+        "id": 8,
+        "label": "Top of the day",
+        "title": "Fresh Salad",
+        "calories": 150,
+        "persons": 1,
+        "cost": 5,
+        "img": "../Image/Food/Fresh-Salad.png"
+    },
+    {
+        "id": 9,
+        "label": null,
+        "title": "Mixed Salad",
+        "calories": 200,
+        "persons": 1,
+        "cost": 6,
+        "img": "../Image/Food/Mixed-Salad.png"
+    },
+    {
+        "id": 10,
+        "label": "Top of the day",
+        "title": "Cherry Pasta",
+        "calories": 400,
+        "persons": 1,
+        "cost": 11,
+        "img": "../Image/Food/Cherry-Pasta.png"
+    },
+    {
+        "id": 11,
+        "label": null,
+        "title": "Penne Pasta",
+        "calories": 500,
+        "persons": 1,
+        "cost": 12,
+        "img": "../Image/Food/Penne-Pasta.jpg"
+    },
+    {
+        "id": 12,
+        "label": "Top of the week",
+        "title": "Pizza mix",
+        "calories": 800,
+        "persons": 3,
+        "cost": 12,
+        "img": "../Image/Food/Pizza-mix.png"
+    },
+    {
+        "id": 13,
+        "label": "Top of the month",
+        "title": "Rustic Meat Pizza",
+        "calories": 850,
+        "persons": 3,
+        "cost": 13,
+        "img": "../Image/Food/Rustic-Meat-Pizza.png"
+    },
+    {
+        "id": 14,
+        "label": null,
+        "title": "Shrimp Pasta",
+        "calories": 550,
+        "persons": 1,
+        "cost": 14,
+        "img": "../Image/Food/Shrimp-Pasta.png"
+    },
+    {
+        "id": 15,
+        "label": null,
+        "title": "Chicken Burger",
+        "calories": 750,
+        "persons": 1,
+        "cost": 11,
+        "img": "../Image/Food/Chicken-Burger.jpg"
+    },
+    {
+        "id": 16,
+        "label": null,
+        "title": "Fried Fettuccine",
+        "calories": 500,
+        "persons": 1,
+        "cost": 12,
+        "img": "../Image/Food/Fried-Fettuccine.jpg"
+    },
+    {
+        "id": 17,
+        "label": null,
+        "title": "Salami Pizza",
+        "calories": 800,
+        "persons": 2,
+        "cost": 11,
+        "img": "../Image/Food/Salami-Pizza.jpg"
+    },
+    {
+        "id": 18,
+        "label": null,
+        "title": "Fried Penne Pasta",
+        "calories": 500,
+        "persons": 1,
+        "cost": 12,
+        "img": "../Image/Food/Fried-Penne-Pasta.jpg"
+    }
+]

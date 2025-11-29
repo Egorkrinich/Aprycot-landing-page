@@ -73,9 +73,9 @@
                     </svg>
                     </div>
                 </div>
-                <a class="header__profile" href="profile.html">
+                <a class="header__profile" href="profile.html" data-profile-container>
                     <div class="header-profile__image">   
-                    <img src="./Image/Profile.png" alt="Profile photo">
+                    <img src="./Image/Avatars/Profile.png" alt="Profile photo">
                     </div>
                     <div class="header-profile__info">
                         <p class="header-profile__name" data-userName></p>
@@ -405,7 +405,7 @@
                 <div class="cart__container">
                     <div class="cart__item cart__item-1">
                         <div class="cart__image">
-                            <img src="./Image/cart_image_1.png" loading="lazy" alt="Mushroom Pizza">
+                            <img src="./Image/Food/Pizza-mix.png" loading="lazy" alt="Mushroom Pizza">
                         </div>
                     <div class="cart__details">
                         <div class="cart__details__info">
@@ -429,7 +429,7 @@
                     </div>
                     <div class="cart__item cart__item-2 ">
                     <div class="cart__image-2 cart__image">
-                        <img src="./Image/cart_image_2.png" loading="lazy" alt="Soup">
+                        <img src="./Image/Food/Creamy-Pumpkin-Soup.png" loading="lazy" alt="Soup">
                     </div>
                     <div class="cart__details">
                         <div class="cart__details__info">
@@ -453,7 +453,7 @@
                     </div>
                     <div class="cart__item cart__item-3">
                     <div class="cart__image-3 cart__image">
-                        <img src="./Image/cart_image_3.png" loading="lazy" alt="Sausage Pizza">
+                        <img src="./Image/Food/Salami-Pizza.jpg" loading="lazy" alt="Sausage Pizza">
                     </div>
                     <div class="cart__details">
                         <div class="cart__details__info">
@@ -477,7 +477,7 @@
                     </div>
                     <div class="cart__item cart__item-4">
                         <div class="cart__image-4 cart__image">
-                            <img src="./Image/cart_image_4.png" loading="lazy" alt="Cheese Pizza">
+                            <img src="./Image/Food/Cheese-Mix-Pizza.png" loading="lazy" alt="Cheese Pizza">
                         </div>
                         <div class="cart__details">
                             <div class="cart__details__info">
@@ -501,7 +501,7 @@
                     </div>
                     <div class="cart__item cart__item-5">
                         <div class="cart__image-5 cart__image">
-                            <img src="./Image/cart_image_5.png" loading="lazy" alt="Vegetable Salad">
+                            <img src="./Image/Food/Fresh-Salad.png" loading="lazy" alt="Vegetable Salad">
                         </div>
                         <div class="cart__details">
                             <div class="cart__details__info">
@@ -524,30 +524,31 @@
                         </div>
                     </div>
                 </div>
-                <button class="Main__btn">Checkout</button>
+                <button class="main-btn">Checkout</button>
         </div>
         <div class="Main-content--home">
-            <div class="Welcome">
-                <h4 class="Welcome__label">👑 Deal of the weekend</h4>
-                <h1 class="Welcome__title">Hello, 
+            <div class="welcome">
+                <h4 class="welcome__label">👑 Deal of the weekend</h4>
+                <h1 class="welcome__title">
+                    Hello, 
                     <span data-userName></span>
                 </h1>
-                <p class="Welcome__desc">Get <span>FREE delivery</span> on every weekend.</p>
-                <button class="Main__btn">Check Menu</button>
+                <p class="welcome__desc">Get <span>FREE delivery</span> on every weekend.</p>
+                <button class="main-btn">Check Menu</button>
             </div>
-            <div class="Discount">
-                <div class="Discount__image">
-                    <img src="./Image/Burger_1.png" loading="lazy" alt="Burger">
+            <div class="discount">
+                <div class="discount__image">
+                    <img src="./Image/Decoration/Double-Burger.png" loading="lazy" alt="Burger">
                 </div>
-                <div class="Discount__text">
+                <div class="discount__text">
                     <h1>50 % off</h1>
                     <p>The full price of burgers</p>
                 </div>
             </div>
-            <div class="Menu-Category">
-                <div class="Menu__header">
-                     <h1 class="Menu__title">Menu category</h1>
-                    <div class="View-all">
+            <div class="food-menu">
+                <div class="food-menu__header">
+                    <h1 class="food-menu__title">Menu category</h1>
+                    <div class="main-view-all">
                         <span>View All</span>
                         <a>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -556,85 +557,85 @@
                         </a>
                     </div>   
                 </div>
-                <div class="Types-category">
-                    <div class="Type-card Pizza">
-                        <div class="icon">
+                <div class="category">
+                    <div class="category__card category__card--Pizza">
+                        <div class="category__image">
                             <img src="./Menu icon/Pizza.svg" alt="Category: Pizza">
                         </div>
-                        <h4>Pizza</h4>
-                        <span></span>
+                        <h4 class="category__title">Pizza</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="Type-card Fruits">
-                        <div class="icon">
+                    <div class="category__card category__card--Fruits">
+                        <div class="category__image">
                             <img src="./Menu icon/Fruits.svg" alt="Category: Fruits">
                         </div>
-                        <h4>Fruits</h4>
-                        <span></span>
+                        <h4 class="category__title">Fruits</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="Type-card Snacks">
-                        <div class="icon">
+                    <div class="category__card category__card--Snacks">
+                        <div class="category__image">
                             <img src="./Menu icon/Snacks.svg" alt="Category: Snacks">
                         </div>
-                        <h4>Snacks</h4>
-                        <span></span>
+                        <h4 class="category__title">Snacks</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="Type-card Veggies">
-                        <div class="icon">
+                    <div class="category__card category__card--Veggies">
+                        <div class="category__image">
                             <img src="./Menu icon/Veggies.svg" alt="Category: Veggies">
                         </div>
-                        <h4>Veggies</h4>
-                        <span></span>
+                        <h4 class="category__title">Veggies</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="Type-card Hotdog">
-                        <div class="icon">
+                    <div class="category__card category__card--Hotdog">
+                        <div class="category__image">
                             <img src="./Menu icon/Hotdog.svg" alt="Category: Hotdog">
                         </div>
-                        <h4>Hotdog</h4>
-                        <span></span>
+                        <h4 class="category__title">Hotdog</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="Type-card Burger">
-                        <div class="icon">
+                    <div class="category__card category__card--Burger">
+                        <div class="category__image">
                             <img src="./Menu icon/Burger.svg" alt="Category: Burger">
                         </div>
-                        <h4>Burger</h4>
-                        <span></span>
+                        <h4 class="category__title">Burger</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="Type-card Drink">
-                        <div class="icon">
+                    <div class="category__card category__card--Drink">
+                        <div class="category__image">
                             <img src="./Menu icon/Drinks.svg" alt="Category: Drink">
                         </div>
-                        <h4>Drink</h4>
-                        <span></span>
+                        <h4 class="category__title">Drink</h4>
+                        <span class="category__separator"></span>
                         <button>
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -642,81 +643,13 @@
                         </button>
                     </div>
                 </div>
-                <div class="Dishes">
-                    <div class="Dish__card Dish-1">
-                        <div class="Dish__image-1 Dish__image">
-                            <img src="./Image/Menu image 1.png" loading="lazy" alt="Pasta">
-                        </div>
-                        <div class="Dish__info">
-                            <h4>Mushroom Pizza</h4>
-                            <div class="Dish__rating">                              
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="Cost">$7.29</p>
-                            <button class="add__button">+</button>
-                        </div>
-                    </div>
-                    <div class="Dish__card Dish-2">
-                        <div class="Dish__image-2 Dish__image">
-                            <img src="./Image/Menu image 2.png" loading="lazy" alt="Spaghetti">
-                        </div>
-                        <div class="Dish__info">
-                            <h4>Spaghetti</h4>
-                            <div class="Dish__rating">                              
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="Cost">$5.99</p>
-                            <button class="add__button">+</button>
-                        </div>
-                    </div>
-                    <div class="Dish__card Dish-3">
-                        <div class="Dish__image-3 Dish__image">
-                            <img src="./Image/Menu image 3.png" loading="lazy" alt="Vegetable salad">
-                        </div>
-                        <div class="Dish__info">
-                            <h4>Vegetable Salad</h4>
-                            <div class="Dish__rating">                              
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="Cost">$4.29</p>
-                            <button class="add__button">+</button>
-                        </div>
-                    </div>
-                    <div class="Dish__card Dish-4">
-                        <div class="Dish__image-4 Dish__image">
-                            <img src="./Image/Menu image 4.png" loading="lazy" alt="Soup">
-                        </div>
-                        <div class="Dish__info">
-                            <h4>Soup</h4>
-                            <div class="Dish__rating">                              
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star checked"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="Cost">$7.29</p>
-                            <button class="add__button">+</button>
-                        </div>
-                    </div>
+                <div class="dishes">
                 </div>
             </div>
-            <div class="Categories">
-                <div class="Categories__header">
-                     <h4>Categories</h4>
-                    <div class="View-all">
+            <div class="meal-groups">
+                <div class="meal-groups__header">
+                     <h4 class="meal-groups__title">Categories</h4>
+                    <div class="main-view-all">
                         <span>View All</span>
                         <a href="#">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -725,62 +658,62 @@
                         </a>
                     </div>   
                 </div>
-                <div class="Categories__list">
-                    <button class="Category__btn Category__burger">
+                <div class="meal-groups__list">
+                    <button class="meal-groups__btn meal-groups__btn--burger">
                         Burgers
                     </button>
-                    <button class="Category__btn Category__Pizza">
+                    <button class="meal-groups__btn meal-groups__btn--pizza">
                         Pizza
                     </button>
-                    <button class="Category__btn Category__Dessert">
+                    <button class="meal-groups__btn meal-groups__btn--dessert">
                         Dessert
                     </button>
-                    <button class="Category__btn Category__Biscuits">
+                    <button class="meal-groups__btn meal-groups__btn--biscuits">
                         Biscuits
                     </button>
-                    <button class="Category__btn Category__Grilled-cheese">
+                    <button class="meal-groups__btn meal-groups__btn--grilled-cheese">
                         Grilled cheese
                     </button>
-                    <button class="Category__btn Category__Tomato-soup">
+                    <button class="meal-groups__btn meal-groups__btn--tomato-soup">
                         Tomato soup
                     </button>
-                    <button class="Category__btn Category__Chicken-fingers">
+                    <button class="meal-groups__btn meal-groups__btn--chicken-fingers">
                         Chicken fingers
                     </button>
-                    <button class="Category__btn Category__Chicken">
+                    <button class="meal-groups__btn meal-groups__btn--chicken">
                         Chicken 
                     </button>
-                    <button class="Category__btn Category__Nuggets">
+                    <button class="meal-groups__btn meal-groups__btn--nuggets">
                         Nuggets
                     </button>
-                    <button class="Category__btn Category__Flatbread-pizza">
+                    <button class="meal-groups__btn meal-groups__btn--flatbread-pizza">
                         Flatbread pizza
                     </button>
-                    <button class="Category__btn Category__Mac-cheese">
+                    <button class="meal-groups__btn meal-groups__btn--mac-cheese">
                         Mac & cheese
                     </button>
-                    <button class="Category__btn Category__Mini-burgers">
+                    <button class="meal-groups__btn meal-groups__btn--mini-burgers">
                         Mini burgers
                     </button>
-                    <button class="Category__btn Category__Mini-pizzas">
+                    <button class="meal-groups__btn meal-groups__btn--mini-pizzas">
                         Mini pizzas
                     </button>
-                    <button class="Category__btn Category__Grilled">
+                    <button class="meal-groups__btn meal-groups__btn--grilled">
                         Grilled 
                     </button>
-                    <button class="Category__btn Category__Veggie-Grills">
+                    <button class="meal-groups__btn meal-groups__btn--veggie-Grills">
                         Veggie Grill’s
                     </button>
-                    <button class="Category__btn Category__Sandwich">
+                    <button class="meal-groups__btn meal-groups__btn--sandwich">
                         Sandwich
                     </button>
-                    <button class="Category__btn Category__Soup">
+                    <button class="meal-groups__btn meal-groups__btn--soup">
                         Soup
                     </button>
                 </div>
             </div>
-            <div class="Trending__orders">
-                <div class="Trending-orders__header">
+            <div class="trending">
+                <div class="trending__header">
                     <h1>Trending Orders</h1>
                     <div class="View-all">
                         <span>View All</span>
@@ -791,96 +724,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="Trending-orders__grid">
-                    <div class="Trending__card Trending__card-1">
-                        <p class="trending__label">👑 Top of the week</p>
-                        <h3 class="trending__title">Italian Salad</h3>
-                        <ul class="trending__detail">
-                            <li>100 Calories</li>
-                            <li class="line"></li>
-                            <li>4 persons</li>
-                        </ul>
-                        <p class="trending__cost">$7.48</p>
-                        <button class="add__button">+</button>
-                        <div class="trending__image-1 trending__image">
-                                <img src="./Image/Trending image 1.png" loading="lazy" alt="Italian Salad">
-                        </div>
-                    </div>
-                    <div class="Trending__card Trending__card-2">
-                        <p class="trending__label">👑 Top of the day</p>
-                        <h3 class="trending__title">Vegetable Salad</h3>
-                        <ul class="trending__detail">
-                            <li>50 Calories</li>
-                            <li class="line"></li>
-                            <li>3 persons</li>
-                        </ul>
-                        <p class="trending__cost">$7.48</p>
-                        <button class="add__button">+</button>
-                        <div class="trending__image-2 trending__image">
-                                <img src="./Image/Trending image 2.png" loading="lazy" alt="Vegetable Salad">
-                        </div>
-                    </div>
-                    <div class="Trending__card Trending__card-3">
-                        <p class="trending__label">👑 Top of the month</p>
-                        <h3 class="trending__title">Chocolate mousse</h3>
-                        <ul class="trending__detail">
-                            <li>80 Calories</li>
-                            <li class="line"></li>
-                            <li>3 persons</li>
-                        </ul>
-                        <p class="trending__cost">$7.48</p>
-                        <button class="add__button">+</button>
-                        <div class="trending__image-3 trending__image">
-                                <img src="./Image/Trending image 3.png" loading="lazy" alt="Chocolate mousse">
-                        </div>
-                    </div>
-                    <div class="Trending__card Trending__card-4">
-                        <p class="trending__label">👑 Top of the week</p>
-                        <h3 class="trending__title">Spaghetti</h3>
-                        <ul class="trending__detail">
-                            <li>60 Calories</li>
-                            <li class="line"></li>
-                            <li>5 persons</li>
-                        </ul>
-                        <p class="trending__cost">$7.48</p>
-                        <button class="add__button">+</button>
-                        <div class="trending__image-4 trending__image">
-                                <img src="./Image/Trending image 4.png" loading="lazy" alt="Spaghetti">
-                        </div>
-                    </div>
-                    <div class="Trending__card Trending__card-5">   
-                        <p class="trending__label">👑 Top of the week</p>
-                        <h3 class="trending__title">Chocolate cupcake</h3>
-                        <ul class="trending__detail">
-                            <li>77 Calories</li>
-                            <li class="line"></li>
-                            <li>6 persons</li>
-                        </ul>
-                        <p class="trending__cost">$7.48</p>
-                        <button class="add__button">+</button>
-                        <div class="trending__image-5 trending__image">
-                                <img src="./Image/Trending image 5.png" loading="lazy" alt="Chocolate cupcake">
-                        </div>
-                    </div>
-                    <div class="Trending__card Trending__card-6">
-                        <p class="trending__label">👑 Top of the week</p>
-                        <h3 class="trending__title">Salad</h3>
-                        <ul class="trending__detail">
-                            <li>80 Calories</li>
-                            <li class="line"></li>
-                            <li>4 persons</li>
-                        </ul>
-                        <p class="trending__cost">$7.48</p>
-                        <button class="add__button">+</button>
-                        <div class="trending__image-6 trending__image">
-                                <img src="./Image/Trending image 6.png" loading="lazy" alt="Salad">
-                        </div>
-                    </div>
+                <div class="trending__content">
                 </div>
             </div>
         </div>
         <div class="Bottom-burger">
-        <img src="./Image/Burger_2.png" loading="lazy" alt="Burger">
+        <img src="./Image//Decoration/Double-Cheese-Burger.png" loading="lazy" alt="Burger">
         </div>
     </main>
     <footer>
@@ -905,6 +754,7 @@
             </div>
         </div>
     </footer>
-    <script src="./Scripts/Script.js"></script>
+    <script src="./Scripts/Script.js" type="module"></script>
+    <script type="module" src="./Scripts/main.js"></script>
 </body>
 </html>

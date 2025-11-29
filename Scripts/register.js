@@ -83,6 +83,7 @@ class FormsValidation {
     }
     saveData() {
         const data = Object.fromEntries(new FormData(this.form))
+        data.userId = Date.now()
         localStorage.setItem('userData', JSON.stringify(data))
         window.location = 'index.html'
     }

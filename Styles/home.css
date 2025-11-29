@@ -27,25 +27,25 @@
     width: 100%;
     height: 300px;
 }
-.Welcome {
+.welcome {
     grid-area: Welcome;
 }
-.Discount {
+.discount {
     grid-area: Discount;
 }
-.Menu-Category {
+.food-menu {
     grid-area: MenuCategory;
 }
-.Trending__orders {
+.trending {
     grid-area: Trending;
 }
-.Categories {
+.meal-groups {
     grid-area: Categories;
 }
 
     /* Welcome */
 
-.Welcome {
+.welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,39 +56,36 @@
     border-radius: 25px;
     padding: 0 80px;
 
-    background: url(../Image/Banner.jpg) no-repeat center;
+    background: url(../Image/Welcome/Welcome-1.jpg) no-repeat center;
     background-position: 0 45%;
 }
-.Welcome__label {
+.welcome__label {
     font-size: 13px;
     color: #EA6A12;
     font-weight: 400;
     margin-bottom: 20px;
 }
-.Welcome__title {
+.welcome__title {
     margin-bottom: 20px;
 }
-.Welcome__desc {
+.welcome__desc {
     font-weight: 600;
     color: #959895;
     margin-bottom: 20px;
 }
-.Welcome__desc span {
+.welcome__desc span {
     color: #EA6A12;
-}
-.Main__btn:hover {
-    background: #b44e0b;
 }
 
     /* Discount */
 
-.Discount {
+.discount {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     position: relative;
+
     margin-top: auto;
     height: 310px;
     max-width: 580px;
@@ -96,28 +93,28 @@
     border-radius: 25px;
     background: var(--main-content-background);
 }
-.Discount__image {
+.discount__image {
     position: absolute;
     top: -30%;
 }
-.Discount__text {
+.discount__text {
     margin-top: 150px;
     text-align: center;
 }
-.Discount__text p {
+.discount__text p {
    color: #959895;
    font-weight: 600;
 }
 
-    /* Main Menu */
+    /* Food Menu */
 
-.Menu-Category {
+.food-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 800px;
 }
-.Menu__header {
+.food-menu__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,21 +123,10 @@
     height: 100px;
     margin-bottom: 50px;
 }
-.View-all a {
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    background: var(--primary-orange);
-    border-radius: 50%;
-    transition: all 0.3s;
-}
-.View-all a:hover {
-    background: #b3500e;
-}
 
-    /* types */
+/* Types */
 
-.Types-category {
+.category {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -149,7 +135,7 @@
     justify-content: center;
     margin-bottom: 40px;
 }
-.Type-card {
+.category__card {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -164,7 +150,7 @@
     border-radius: 25px;
     transition: all 0.5s;
 }
-.Type-card .icon {
+.category__card .category__image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,7 +160,7 @@
     background: #ffffff;
     margin-bottom: 20px;
 }
-.Type-card span {
+.category__card .category__separator {
     display: block;
     background: #EA6A12;
     width: 32px;
@@ -182,15 +168,15 @@
     margin-top: 25px;
     transition: all 0.5s;
 }
-.Type-card:hover span{
+.category__card:hover .category__separator{
     width: 50px;
     background: #fff;
     opacity: 0.7;
 }
-.Type-card:hover {
+.category__card:hover {
     background: rgba(234, 106, 18, 0.7);
 }
-.Type-card button {
+.category__card button {
     border: 0;
     height: 24px;
     width: 24px;
@@ -199,9 +185,9 @@
     margin-top: 20px;
 }
 
-    /* Dishes */
+/* Dishes */
 
-.Dishes {
+.dishes {
     display: grid;
     grid-template-columns: repeat(auto-fit, 250px);
     gap: 100px 30px;
@@ -209,7 +195,7 @@
     margin-top: 130px;
     justify-content: center;
 }
-.Dish__card {
+.dishes__card {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -223,109 +209,104 @@
     background: var(--main-content-background);
     border-radius: 25px;
 }
-.Dish__image {
-    position: absolute;
-    top: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 170px;
-    height: 170px;
-
-    border-radius: 50%;
-    overflow: hidden;
-}
-.Dish__image img { 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}  
-
-.Dish__image-1 {
-    box-shadow: 0 10px 30px rgba(180, 78, 11, 0.7);
-}
-.Dish__image-2 {
-    box-shadow: 0 10px 30px rgba(141, 141, 141, 0.7);
-}
-.Dish__image-3 {
-    box-shadow: 0 10px 30px rgba(200, 255, 138, 0.7);
-}
-.Dish__image-4 {
-    box-shadow: 0 10px 30px rgba(253, 178, 80, 0.7);
-}
-
-.Dish__image-1 img {
-    object-position: 43% 0%;
-    transform: scale(1.2);
-}
-.Dish__image-2 img {
-    object-position: 0% 100%;
-    transform: scale(1.2);
-}
-.Dish__image-3 img {
-    object-position: 0% 70%;
-    transform: scale(1.8);
-}
-.Dish__image-4 img {
-    object-position: 100% 60%;
-    transform: scale(1.5);
-    top: 0%;
-    left: -8%;
-}
-
-.Dish__info  {
+.dishes__info  {
     margin-top: 50%;
 }
-.Dish__rating {
+.dishes__rating  {
     margin-top: 8px;
     color: #868686;
 }
-.Dish__rating .checked {
+.dishes__rating .checked {
     color: #EA6A12;
 }
-.Dish__card .Cost {
-    margin-top: 20px;
-    font-weight: 600;
-    color: #EA6A12;
-}
-.add__button {
-    border: 0;
-    height: 24px;
-    width: 24px;
-    color: #fff;
-    border-radius: 50%;
-    background: var(--primary-orange);
-    transition: all 0.3s;
-}
-.Dish__card .add__button {
+.dishes__card .main-add-button {
     position: absolute;
     bottom: 10%;
     right: 10%;
 }
-.add__button:hover{
-    background: #b3500e;
+.dishes__image {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dishes__image img { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    /* Meal Groups */
+
+.meal-groups {
+    display: block;
+    align-self: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 15px 15px;
+
+    border-radius: 25px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+}
+.meal-groups__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 100%;
+    height: 70px;
+
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--arrows-lines);
+}
+.meal-groups__title {
+    font-size: 25px;
+    font-family: 'Playfair display', serif;
+}
+.meal-groups__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.meal-groups__btn {
+    display: block;
+    height: 50px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--primary-orange);
+    background: #fff;
+    color: var(--primary-orange);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+.meal-groups__btn:hover {
+    color: #fff;
+    background: var(--primary-orange);
 }
 
-    /* Trending orders */
+    /* Trending */
 
-.Trending__orders {
+.trending {
     z-index: 10;
 }
-.Trending-orders__header {
+.trending__header {
     display: flex;
     margin-bottom: 30px;
     justify-content: space-between;
     padding: 0px 20px;
 
 }
-.Trending-orders__grid {
+.trending__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, 280px);
     gap: 100px;
     justify-content: center;
 }
-.Trending__card {
+.trending__card {
     box-sizing: border-box;
     position: relative;
     padding: 20px;
@@ -356,7 +337,7 @@
     background: #959895;
     margin: 10px 0;
 }
-.trending__cost {
+.trending__card .main-cost {
     display: inline-block;
     margin-top: 20px;
     font-weight: 600;
@@ -384,100 +365,6 @@
     height: 100%;
     object-fit: cover;
 }
-.trending__image-1 {
-    box-shadow: -20px -10px 30px rgba(255, 169, 112, 0.7);
-}
-.trending__image-2 {
-    box-shadow: -20px -10px 30px rgb(194, 194, 194);
-}
-.trending__image-3 {
-    box-shadow: -20px -10px 30px rgb(53, 53, 53);
-}
-.trending__image-4 {
-    box-shadow: -20px -10px 30px rgba(151, 151, 151, 0.7);
-}
-.trending__image-5 {
-    box-shadow: -20px -10px 30px rgba(95, 53, 25, 0.432);
-}
-.trending__image-6 {
-    box-shadow: -20px -10px 30px rgba(80, 177, 0, 0.349);
-}
-.trending__image-1 img {
-    top: 0.4%;
-}
-.trending__image-2 img {
-    transform: scale(1.8);
-}
-.trending__image-3 img {
-    transform: scale(2.1);
-    top: 10%;
-    left: 25%;
-}
-.trending__image-4 img {
-    transform: scale(1.4);
-    object-position: 20% 100%;
-}
-.trending__image-5 img {
-    transform: scale(1.7);
-    top: 35%;
-    left: 30%;
-}
-.trending__image-6 img {
-    transform: scale(1.5);
-    object-position: 50% 50%;
-}
-
-    /* Categories */
-
-.Categories {
-    display: block;
-    align-self: start;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 15px 15px;
-
-    border-radius: 25px;
-    border: 1px solid #fff;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    z-index: 10;
-
-}
-.Categories__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    max-width: 100%;
-    height: 70px;
-
-    margin-bottom: 30px;
-    border-bottom: 2px solid var(--arrows-lines);
-}
-.Categories__header h4 {
-    font-size: 25px;
-    font-family: 'Playfair display', serif;
-}
-.Categories__list {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.Category__btn {
-    display: block;
-    height: 50px;
-    padding: 5px 20px;
-    border-radius: 50px;
-    border: 1px solid var(--primary-orange);
-    background: #fff;
-    color: var(--primary-orange);
-    font-size: 16px;
-    transition: all 0.3s;
-}
-.Category__btn:hover {
-    color: #fff;
-    background: var(--primary-orange);
-}
 
     /* Media queries */
 
@@ -501,25 +388,25 @@
         "Categories"
         "Trending"
     }
-    .Welcome,
-    .Discount,
-    .Menu-Category,
-    .Trending__orders,
-    .Categories {
+    .welcome,
+    .discount,
+    .food-menu,
+    .trending,
+    .meal-groups {
         width: 100%;
     }
-    .Discount {
+    .discount {
         margin-top: 60px;
     }
-    .Trending__orders {
+    .trending {
         margin-bottom: 100px;
     }
 }
 @media (max-width: 400px) {
-    .Grid__wrapper {
+    .Main-content--home {
         margin: 30px 0;
     }
-    .Trending__card {
+    .trending__card {
         width: 250px;
     }
 

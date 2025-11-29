@@ -68,7 +68,7 @@
 
     border-radius: 30px;
     overflow: hidden;
-    background: url(../Image/Welcome/User-profile-welcome.jpg) no-repeat ;
+    background: url(../Image/Welcome/Welcome-4.jpg) no-repeat ;
     flex: 1 / -1;
 }
 .welcome-profile__info {
@@ -206,7 +206,7 @@
     box-sizing: border-box;
     
     background-color: #fff;
-    background-image: url(../Image/Offer\ Card.png);
+    background-image: url(../Image/Decoration/Offer\ Card.png);
     border-radius: 20px;
 }
 .offer__title {
@@ -238,7 +238,12 @@
 .offer__discount span {
     width: 50%;
 }
-
+.offer__img {
+    width: 150px;
+}
+.offer__img img {
+    border-radius: 10px;
+}
     /* Second column */
 
 .column-2 {
