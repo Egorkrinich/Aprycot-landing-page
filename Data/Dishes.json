@@ -6,7 +6,7 @@
         "calories": 600,
         "persons": 1,
         "cost": 15,
-        "img": "../Image/Food/Buttery-Pork-Belly.png"
+        "img": "./Image/Food/Buttery-Pork-Belly.png"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "calories": 700,
         "persons": 3,
         "cost": 11,
-        "img": "../Image/Food/Cheese-Mix-Pizza.png"
+        "img": "./Image/Food/Cheese-Mix-Pizza.png"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "calories": 350,
         "persons": 1,
         "cost": 4,
-        "img": "../Image/Food/Chocolate-Cupcake.png"
+        "img": "./Image/Food/Chocolate-Cupcake.png"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "calories": 250,
         "persons": 1,
         "cost": 5,
-        "img": "../Image/Food/Chocolate-Mousse.png"
+        "img": "./Image/Food/Chocolate-Mousse.png"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "calories": 250,
         "persons": 1,
         "cost": 6,
-        "img": "../Image/Food/Creamy-Pumpkin-Soup.png"
+        "img": "./Image/Food/Creamy-Pumpkin-Soup.png"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "calories": 550,
         "persons": 1,
         "cost": 12,
-        "img": "../Image/Food/Spaghetti-Primavera.jpg"
+        "img": "./Image/Food/Spaghetti-Primavera.jpg"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "calories": 750,
         "persons": 1,
         "cost": 11,
-        "img": "../Image/Food/Grilled-Beef-Burger.jpg"
+        "img": "./Image/Food/Grilled-Beef-Burger.jpg"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "calories": 150,
         "persons": 1,
         "cost": 5,
-        "img": "../Image/Food/Fresh-Salad.png"
+        "img": "./Image/Food/Fresh-Salad.png"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "calories": 200,
         "persons": 1,
         "cost": 6,
-        "img": "../Image/Food/Mixed-Salad.png"
+        "img": "./Image/Food/Mixed-Salad.png"
     },
     {
         "id": 10,
@@ -87,7 +87,7 @@
         "calories": 400,
         "persons": 1,
         "cost": 11,
-        "img": "../Image/Food/Cherry-Pasta.png"
+        "img": "./Image/Food/Cherry-Pasta.png"
     },
     {
         "id": 11,
@@ -96,7 +96,7 @@
         "calories": 500,
         "persons": 1,
         "cost": 12,
-        "img": "../Image/Food/Penne-Pasta.jpg"
+        "img": "./Image/Food/Penne-Pasta.jpg"
     },
     {
         "id": 12,
@@ -105,7 +105,7 @@
         "calories": 800,
         "persons": 3,
         "cost": 12,
-        "img": "../Image/Food/Pizza-mix.png"
+        "img": "./Image/Food/Pizza-mix.png"
     },
     {
         "id": 13,
@@ -114,7 +114,7 @@
         "calories": 850,
         "persons": 3,
         "cost": 13,
-        "img": "../Image/Food/Rustic-Meat-Pizza.png"
+        "img": "./Image/Food/Rustic-Meat-Pizza.png"
     },
     {
         "id": 14,
@@ -123,7 +123,7 @@
         "calories": 550,
         "persons": 1,
         "cost": 14,
-        "img": "../Image/Food/Shrimp-Pasta.png"
+        "img": "./Image/Food/Shrimp-Pasta.png"
     },
     {
         "id": 15,
@@ -132,7 +132,7 @@
         "calories": 750,
         "persons": 1,
         "cost": 11,
-        "img": "../Image/Food/Chicken-Burger.jpg"
+        "img": "./Image/Food/Chicken-Burger.jpg"
     },
     {
         "id": 16,
@@ -141,7 +141,7 @@
         "calories": 500,
         "persons": 1,
         "cost": 12,
-        "img": "../Image/Food/Fried-Fettuccine.jpg"
+        "img": "./Image/Food/Fried-Fettuccine.jpg"
     },
     {
         "id": 17,
@@ -150,7 +150,7 @@
         "calories": 800,
         "persons": 2,
         "cost": 11,
-        "img": "../Image/Food/Salami-Pizza.jpg"
+        "img": "./Image/Food/Salami-Pizza.jpg"
     },
     {
         "id": 18,
@@ -159,6 +159,6 @@
         "calories": 500,
         "persons": 1,
         "cost": 12,
-        "img": "../Image/Food/Fried-Penne-Pasta.jpg"
+        "img": "./Image/Food/Fried-Penne-Pasta.jpg"
     }
 ]
