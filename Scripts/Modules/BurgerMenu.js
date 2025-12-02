@@ -35,5 +35,8 @@ export default class Menu {
         array.forEach((el) => {
             el?.classList.toggle('active', eventStatus)
         })
+        if (this.menu.dataset.menu === "cart" && eventStatus) {
+            document.dispatchEvent(new CustomEvent('cart-updated'))
+        }
     }
 }

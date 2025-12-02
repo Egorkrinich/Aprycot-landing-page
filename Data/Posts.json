@@ -1,0 +1,40 @@
+[
+    {
+        "userId": "demo",
+        "posts": 
+        [
+            {
+            "image": "./Image/Posts/Post-image-1.jpg",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id quam tortor nec arcu. Euismod neque ultricies eget adipiscing condimentum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id quam tortor nec arcu. Euismod neque ultricies eget adipiscing condimentum."
+            },
+            {
+              "image": "",
+              "body": "Fresh Salad is now available every evening — made by hand in our kitchen."
+            },
+            {
+              "image": "",
+              "body": "Our chefs are testing a new spicy sauce today 🔥 Can’t wait to share it with you!"
+            },
+            {
+              "image": "",
+              "body": "Today’s special dessert is a Chocolate Cupcake that melts in your mouth 🍰"
+            },
+            {
+              "image": "",
+              "body": "Weekend vibes: warm bread, soft music, and a cozy atmosphere 😌"
+            },
+            {
+              "image": "",
+              "body": "Trying out a new cocktail recipe tonight — sweet, fresh, and a little mysterious."
+            },
+            {
+              "image": "",
+              "body": "Our team is getting ready for a big update next month. Stay tuned!"
+            },
+            {
+              "image": "",
+              "body": "We appreciate every review you leave — thank you for helping us improve ❤️"
+            }
+        ]
+    }
+]

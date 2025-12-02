@@ -11,8 +11,6 @@
 
     gap: 30px;
     margin: 30px;
-    margin-left: 150px;
-    /* padding-top: 30px; */
     
     width: 90%;
     grid-template-areas: 
@@ -148,7 +146,12 @@
 .column-1 {
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: -1000px;    
+    flex-shrink: 0;
     gap: 30px;
+
+    height: 100vh;
     max-width: 350px;
 }
 
@@ -248,11 +251,18 @@
 
 .column-2 {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: column  ;
     max-width: 770px;
 }
-
+.posts__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.posts__sentinel{
+    height: 10px;
+    width: 100%;
+}
 /* posts */
 
 .post__header {
@@ -349,6 +359,10 @@
     flex-direction: column;
     gap: 30px;
     max-width: 500px;
+    flex-shrink: 0;
+    position: sticky;
+    top: -1000px;  
+    height: 100vh;
 }
 
 /* news */
@@ -423,6 +437,8 @@
         max-width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
+        position: static;
+        height: auto;
     }
     .about,
     .suggestions,
@@ -445,9 +461,11 @@
 }
 @media(max-width: 1000px) {
     .Main-content--profile {
-        margin-left: 30px;
         width: 100%;
     }
+    /* .column-3 {
+        top: -1500px;
+    } */
 }
 @media(max-width: 900px) {
     .Main-content--profile {
@@ -471,6 +489,10 @@
     }
     .column-2 {
         margin-inline: auto;
+    }
+    .column-3 {
+        position: static;
+        height: auto;
     }
     .welcome-profile__tabs {
         display: flex;

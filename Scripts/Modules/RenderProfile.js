@@ -11,34 +11,16 @@ export default class RenderProfile {
         followers: document.querySelectorAll(`[data-profile-followers]`),
         location: document.querySelectorAll(`[data-profile-location]`),
     }
-    constructor(id) {
-        this.id = id
+    constructor(userData) {
+        this.userData = userData
 
-        this.loadData()
-    }
-    loadData() {
-        // fetch(`user/${this.userId}`)
-        const userData = JSON.parse(localStorage.getItem('userData'))
-        this.loadName(userData.firstName, userData.lastName)
         this.renderUserProfile(userData)
-
-        fetch(`users.json`)
-        .then((res) => res.json())
-        .then((json) => {
-            const jsonUser = 
-            json.find(({userId}) => userId === this.id) ||
-            json.find(({userId}) => userId === 'demo')
-
-            if (jsonUser) {
-                this.renderUserProfile(jsonUser)
-            }
-        })
-        .catch((rej) => console.error(rej))
+        this.renderName(userData.firstName, userData.lastName)
     }
     renderUserProfile(userData) {
         Object.entries(userData).forEach(([key, value]) => {
+            if (key === 'firstName' || key === 'lastName') return
             const el = this.selectors[key]
-            if (key === 'firstName' || key === 'lastName') return 
             if (el) {
                 el.forEach((el) => {
                     el.textContent = value
@@ -46,10 +28,9 @@ export default class RenderProfile {
             }
         })
     }
-    loadName(firstName, lastName) {
+    renderName(firstName, lastName) {
         this.selectors.name.forEach((name) => {
             name.textContent = `${firstName} ${lastName}`
         })
-    }
-    
+    } 
 }
