@@ -301,6 +301,7 @@
 }
 .trending__content {
     display: grid;
+    padding-inline: 20px;
     grid-template-columns: repeat(auto-fit, 280px);
     gap: 100px;
     justify-content: center;

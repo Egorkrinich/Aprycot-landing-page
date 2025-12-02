@@ -48,13 +48,13 @@ export default class RenderPosts {
     }
     async loadPosts() {
         if (!this.posts) {
-            const res = await fetch('/Data/Posts.json')
+            const res = await fetch('./Data/Posts.json')
             if (!res.ok) throw new Error('failed load posts')
             const json = await res.json()
 
             this.posts = 
-            json.find(({userId}) => userId === this.Id)?.posts ||
-            json.find(({userId}) => userId === "demo")?.posts  
+            json?.find(({userId}) => userId === this.Id)?.posts ||
+            json?.find(({userId}) => userId === "demo")?.posts  
         }
         this.getChunk() 
     }

@@ -24,7 +24,7 @@ export default class Cart {
     async getData() {
         try {
             if (!this.DishesData) {
-            const res = await fetch('/Data/Dishes.json')
+            const res = await fetch('./Data/Dishes.json')
             if (!res.ok) throw new Error('failed to load cart')
             this.DishesData = await res.json()
             }
@@ -36,7 +36,7 @@ export default class Cart {
         
         cartData.forEach(({id, amount}) => {
             const dishData = this.DishesData
-            .find((data) => data.id === Number(id))
+            ?.find((data) => data.id === Number(id))
             if (!dishData) return
             
             dishArray.push({...dishData, amount})

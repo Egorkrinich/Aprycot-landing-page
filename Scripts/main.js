@@ -15,7 +15,7 @@ if (path.endsWith('/') || path.endsWith('/index.html')) {
 }
 if (path.endsWith('/profile.html')) {
     const profileId = new URL(window.location.href).searchParams.get('id')
-    fetch('/Data/users.json')
+    fetch('./Data/users.json')
     .then((res) => res.json())
     .then((json) => {
         const data1 = JSON.parse(localStorage.getItem('userData'))
