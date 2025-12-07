@@ -454,7 +454,8 @@
     grid-template-columns: 
     minmax(300px, 500px)
     minmax(500px, 800px);
-    grid-template-rows: 600px minmax(150px, 1fr);
+    grid-template-rows: 600px minmax(150px, 1fr) minmax(200px, 2.1fr);
+    min-height: 3000px;
     grid-template-areas: 
     'profile profile'
     'column1 column1'
@@ -466,7 +467,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         position: static;
-        height: auto;
+        height: fit-content;
+    }
+    .column-3 {
+        position: static;
     }
     .about,
     .suggestions,
@@ -477,7 +481,7 @@
     }
     .suggestions {
         max-width: 100%;
-        order: 2;
+        order: 2;   
     }
     .suggestions__content {
         flex-direction: row;
@@ -505,6 +509,7 @@
         'column1'
         'column3'
         ;
+        min-height: fit-content;
         grid-auto-rows: min-content;
     }
     .column-1,
