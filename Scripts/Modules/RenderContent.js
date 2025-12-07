@@ -1,4 +1,4 @@
-import {Templates} from "./Templates.js";
+import { Templates } from "../Templates/Templates.js";
 
 export default class RenderContent {
     constructor(container, template, isTop, amount) {
@@ -23,6 +23,6 @@ export default class RenderContent {
             
             this.container.innerHTML = content
             .map((el) => Templates[this.template](el)).join('')
-    })
+        })
     }
 }

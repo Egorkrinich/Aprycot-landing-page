@@ -1,0 +1,82 @@
+[
+  {
+    "postId": 1764763013481,
+    "Comments": [
+      {
+        "commentId": 101,
+        "userId": 1764764023483,
+        "body": "Great atmosphere and the staff were really friendly."
+      },
+      {
+        "commentId": 102,
+        "userId": 1764764013482,
+        "body": "The pasta was amazing, totally worth the price!"
+      }
+    ]
+  },
+  {
+    "postId": 1764762462006,
+    "Comments": [
+      {
+        "commentId": 201,
+        "userId": 1764763462007,
+        "body": "A bit crowded, but the food came fast and was delicious."
+      },
+      {
+        "commentId": 202,
+        "userId": 1764764013482,
+        "body": "Loved the dessert menu, highly recommend the cheesecake!"
+      },
+      {
+        "commentId": 203,
+        "userId": 1764764013482,
+        "body": "Good place for a late dinner, prices are fair."
+      }
+    ]
+  },
+  {
+    "postId": 1764762398456,
+    "Comments": [
+      {
+        "commentId": 301,
+        "userId": 1764764013482,
+        "body": "Service was a bit slow but the food was top notch."
+      }
+    ]
+  },
+  {
+    "postId": 1764762283311,
+    "Comments": [
+      {
+        "commentId": 401,
+        "userId": 1764764023483,
+        "body": "Their burgers are some of the best in the city!"
+      },
+      {
+        "commentId": 402,
+        "userId": 1764763462007,
+        "body": "Loved the interior design, very cozy and modern."
+      }
+    ]
+  },
+  {
+    "postId": 1764762072155,
+    "Comments": [
+      {
+        "commentId": 501,
+        "userId": 1764764013482,
+        "body": "Perfect place for breakfast, the coffee is fantastic."
+      },
+      {
+        "commentId": 502,
+        "userId": 1764764023483,
+        "body": "Staff was polite and the food was fresh."
+      },
+      {
+        "commentId": 503,
+        "userId": 1764764023483,
+        "body": "Amazing variety on the menu, will come again."
+      }
+    ]
+  }
+]

@@ -83,7 +83,7 @@ class FormsValidation {
     }
     saveData() {
         const data = Object.fromEntries(new FormData(this.form))
-        data.userId = Date.now()
+        data.userId = 1
         localStorage.setItem('userData', JSON.stringify(data))
         window.location = 'index.html'
     }
@@ -131,4 +131,10 @@ class FormSessionSave {
     }
 }
 new FormSessionSave('[data-form]')
+document.addEventListener('DOMContentLoaded', () => {
+    const userData = localStorage.getItem('userData')
+    if (userData) {
+        window.location = 'index.html'
+    }
+})
 

@@ -13,6 +13,8 @@
     margin: 30px;
     
     width: 90%;
+    min-height: 2300px;
+
     grid-template-areas: 
     'profile profile profile'
     'column3 column2 column1'    
@@ -92,6 +94,8 @@
     height: 140px;
     top: -40px;
     left: 30px;
+    overflow: hidden;
+    border-radius: 50%;
 }
 .welcome-profile__name {
     font-family: 'Playfair Display';
@@ -147,7 +151,7 @@
     display: flex;
     flex-direction: column;
     position: sticky;
-    top: -1000px;    
+    top: -1000px;
     flex-shrink: 0;
     gap: 30px;
 
@@ -303,20 +307,20 @@
     flex-wrap: wrap;
     margin-bottom: 10px;
 }
-.post__like-button,
-.post__comments-button,
-.post__share-button {
+.interaction__like-button,
+.interaction__comments-button,
+.interaction__share-button {
     cursor: pointer;
 }
-.post__share-button {
+.interaction__share-wrapper {
     color: var(--primary-orange);
     margin-left: auto;
 }
-.post__comment-input {
+.interaction__comments-input {
     flex-basis: 100%;
     order: 2;
 }
-.post__comment-input input {
+.interaction__comments-input input {
     width: 100%;
     padding: 16px 24px;
     border-radius: 30px;
@@ -329,11 +333,20 @@
     gap: 5px;
 }
 
-.comments {
+.comments-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.comments__container {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 .comment {
     display: flex;
     gap: 10px;
@@ -350,6 +363,21 @@
 }
 .comment__text {
     color: var(--primary-grey);
+}
+.comment__interaction {
+    color: var(--primary-orange);
+}
+.show-more {
+    cursor: pointer;
+    padding: 15px 20px;
+    flex: 0 0 auto;
+    margin-inline: auto;
+    border-radius: 20px;
+    border: 0;
+    transition: all 0.3s;
+}
+.show-more:hover {
+    background: #888888;
 }
 
     /* Third column */

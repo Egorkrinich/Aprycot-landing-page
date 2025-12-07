@@ -1,4 +1,4 @@
-export default class AccordionList {
+export default class Accordion {
     constructor(list, accButton, accContent, button) {
         this.container = document.querySelector(`.${list}`)
         // Accordion content

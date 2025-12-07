@@ -1,4 +1,4 @@
-import {Templates} from "./Templates.js"
+import { Templates } from "../Templates/Templates.js"
 
 export default class Cart {
     constructor(container, addButton, delButton, checkout) {

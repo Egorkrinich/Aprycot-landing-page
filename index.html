@@ -75,13 +75,14 @@
                     </svg>
                     </div>
                 </div>
-                <a class="header__profile" href="profile.html" data-profile-container>
+                <a class="header__profile" href="profile.html" data-profile-link>
                     <div class="header-profile__image">   
-                    <img src="./Image/Avatars/Profile.png" alt="Profile photo">
+                    <img src="" alt="Profile photo"
+                    data-current-avatar>
                     </div>
                     <div class="header-profile__info">
-                        <p class="header-profile__name" data-userName></p>
-                        <p class="header-profile__title">User</p>
+                        <p class="header-profile__name" data-current-name></p>
+                        <p class="header-profile__title" data-current-title>User</p>
                     </div>
                 </a>
             </div>
@@ -413,7 +414,7 @@
                 <h4 class="welcome__label">👑 Deal of the weekend</h4>
                 <h1 class="welcome__title">
                     Hello, 
-                    <span data-userName></span>
+                    <span data-current-name></span>
                 </h1>
                 <p class="welcome__desc">Get <span>FREE delivery</span> on every weekend.</p>
                 <button class="main-btn">Check Menu</button>
@@ -430,9 +431,9 @@
             <div class="food-menu">
                 <div class="food-menu__header">
                     <h1 class="food-menu__title">Menu category</h1>
-                    <div class="main-view-all">
+                    <div>
                         <span>View All</span>
-                        <a>
+                        <a class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -446,7 +447,7 @@
                         </div>
                         <h4 class="category__title">Pizza</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -458,7 +459,7 @@
                         </div>
                         <h4 class="category__title">Fruits</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -470,7 +471,7 @@
                         </div>
                         <h4 class="category__title">Snacks</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -482,7 +483,7 @@
                         </div>
                         <h4 class="category__title">Veggies</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -494,7 +495,7 @@
                         </div>
                         <h4 class="category__title">Hotdog</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -506,7 +507,7 @@
                         </div>
                         <h4 class="category__title">Burger</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -518,7 +519,7 @@
                         </div>
                         <h4 class="category__title">Drink</h4>
                         <span class="category__separator"></span>
-                        <button>
+                        <button class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -531,9 +532,9 @@
             <div class="meal-groups">
                 <div class="meal-groups__header">
                      <h4 class="meal-groups__title">Categories</h4>
-                    <div class="main-view-all">
+                    <div>
                         <span>View All</span>
-                        <a href="#">
+                        <a class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -541,55 +542,55 @@
                     </div>   
                 </div>
                 <div class="meal-groups__list">
-                    <button class="meal-groups__btn meal-groups__btn--burger">
+                    <button class="main-btn meal-groups__btn--burger">
                         Burgers
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--pizza">
+                    <button class="main-btn meal-groups__btn--pizza">
                         Pizza
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--dessert">
+                    <button class="main-btn meal-groups__btn--dessert">
                         Dessert
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--biscuits">
+                    <button class="main-btn meal-groups__btn--biscuits">
                         Biscuits
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--grilled-cheese">
+                    <button class="main-btn meal-groups__btn--grilled-cheese">
                         Grilled cheese
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--tomato-soup">
+                    <button class="main-btn meal-groups__btn--tomato-soup">
                         Tomato soup
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--chicken-fingers">
+                    <button class="main-btn meal-groups__btn--chicken-fingers">
                         Chicken fingers
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--chicken">
+                    <button class="main-btn meal-groups__btn--chicken">
                         Chicken 
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--nuggets">
+                    <button class="main-btn meal-groups__btn--nuggets">
                         Nuggets
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--flatbread-pizza">
+                    <button class="main-btn meal-groups__btn--flatbread-pizza">
                         Flatbread pizza
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--mac-cheese">
+                    <button class="main-btn meal-groups__btn--mac-cheese">
                         Mac & cheese
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--mini-burgers">
+                    <button class="main-btn meal-groups__btn--mini-burgers">
                         Mini burgers
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--mini-pizzas">
+                    <button class="main-btn meal-groups__btn--mini-pizzas">
                         Mini pizzas
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--grilled">
+                    <button class="main-btn meal-groups__btn--grilled">
                         Grilled 
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--veggie-Grills">
+                    <button class="main-btn meal-groups__btn--veggie-Grills">
                         Veggie Grill’s
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--sandwich">
+                    <button class="main-btn meal-groups__btn--sandwich">
                         Sandwich
                     </button>
-                    <button class="meal-groups__btn meal-groups__btn--soup">
+                    <button class="main-btn meal-groups__btn--soup">
                         Soup
                     </button>
                 </div>
@@ -597,14 +598,14 @@
             <div class="trending">
                 <div class="trending__header">
                     <h1>Trending Orders</h1>
-                    <div class="main-view-all">
+                    <div>
                         <span>View All</span>
-                        <a>
+                        <a class="main-view-all">
                             <svg width="24" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.25 1.5L4.75 5L1.25 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                    </div>
+                    </div> 
                 </div>
                 <div class="trending__content">
                 </div>
@@ -636,7 +637,7 @@
             </div>
         </div>
     </footer>
-    <script src="./Scripts/Script.js" type="module"></script>
-    <script type="module" src="./Scripts/main.js"></script>
+    <script src="./Scripts/global.js" type="module"></script>
+    <script src="./Scripts/main.js" type="module"></script>
 </body>
 </html>

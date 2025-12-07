@@ -176,11 +176,6 @@
     background: rgba(234, 106, 18, 0.7);
 }
 .category__card button {
-    border: 0;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: var(--primary-orange);
     margin-top: 20px;
 }
 
@@ -271,22 +266,16 @@
     gap: 30px;
     flex-wrap: wrap;
 }
-.meal-groups__btn {
-    display: block;
-    height: 50px;
-    padding: 5px 20px;
-    border-radius: 50px;
-    border: 1px solid var(--primary-orange);
+.meal-groups__list .main-btn {
     background: #fff;
     color: var(--primary-orange);
-    font-size: 16px;
-    transition: all 0.3s;
+    border: 1px solid var(--primary-orange);
 }
-.meal-groups__btn:hover {
+.meal-groups__list .main-btn:hover {
     color: #fff;
     background: var(--primary-orange);
 }
-
+    
     /* Trending */
 
 .trending {

@@ -1,37 +1,45 @@
 [
     {
-        "userId": "demo",
+        "userId": 1,
         "posts": 
         [
             {
-            "image": "./Image/Posts/Post-image-1.jpg",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id quam tortor nec arcu. Euismod neque ultricies eget adipiscing condimentum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id quam tortor nec arcu. Euismod neque ultricies eget adipiscing condimentum."
+              "postId": 1764763013481,
+              "image": "./Image/Posts/Post-image-1.jpg",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id quam tortor nec arcu. Euismod neque ultricies eget adipiscing condimentum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id quam tortor nec arcu. Euismod neque ultricies eget adipiscing condimentum."
             },
             {
+              "postId": 1764762554191,
               "image": "",
               "body": "Fresh Salad is now available every evening — made by hand in our kitchen."
             },
             {
+              "postId": 1764762462006,
               "image": "",
               "body": "Our chefs are testing a new spicy sauce today 🔥 Can’t wait to share it with you!"
             },
             {
+              "postId": 1764762398456,
               "image": "",
               "body": "Today’s special dessert is a Chocolate Cupcake that melts in your mouth 🍰"
             },
             {
+              "postId": 1764762283311,
               "image": "",
               "body": "Weekend vibes: warm bread, soft music, and a cozy atmosphere 😌"
             },
             {
+              "postId": 1764762203957,
               "image": "",
               "body": "Trying out a new cocktail recipe tonight — sweet, fresh, and a little mysterious."
             },
             {
+              "postId": 1764762072155,
               "image": "",
               "body": "Our team is getting ready for a big update next month. Stay tuned!"
             },
             {
+              "postId": 1764761872062,
               "image": "",
               "body": "We appreciate every review you leave — thank you for helping us improve ❤️"
             }
