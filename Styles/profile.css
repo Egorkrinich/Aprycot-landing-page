@@ -42,9 +42,10 @@
 .general-column__item {
     padding: 30px;
 
-    background: #fff;
+    background: var(--main-item-background);
     box-sizing: border-box;
     border-radius: 20px;
+    transition: all 0.3s;
 }
 .general-content__item {
     display: flex;
@@ -82,7 +83,7 @@
     margin-top: auto;
     gap: 30px;
 
-    background: rgba(255, 255, 255, 0.5) ;
+    background: var(--welcome-profile-bg) ;
     backdrop-filter: blur(20px);
     padding-inline: 30px;
     padding-left: 200px;
@@ -212,7 +213,7 @@
     padding: 30px;
     box-sizing: border-box;
     
-    background-color: #fff;
+    background-color: var(--main-item-background);
     background-image: url(../Image/Decoration/Offer\ Card.png);
     border-radius: 20px;
 }
@@ -312,6 +313,9 @@
 .interaction__share-button {
     cursor: pointer;
 }
+.post__interaction svg {
+    stroke: var(--primary-svg);
+}
 .interaction__share-wrapper {
     color: var(--primary-orange);
     margin-left: auto;
@@ -324,6 +328,7 @@
     width: 100%;
     padding: 16px 24px;
     border-radius: 30px;
+    background: var(--primary-input) ;
     border: 1px solid var(--primary-grey);
     font-size: 16px;
 }
@@ -495,9 +500,6 @@
     .Main-content--profile {
         width: 100%;
     }
-    /* .column-3 {
-        top: -1500px;
-    } */
 }
 @media(max-width: 900px) {
     .Main-content--profile {

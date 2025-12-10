@@ -7,6 +7,7 @@ import Tab from "./Modules/Tabs.js"
 import Cart from "./Modules/Cart.js"
 import RenderPosts from "./Modules/RenderPosts.js"
 import RenderComments from "./Modules/RenderComment.js"
+import ThemeSwither from "./Modules/ThemeSwither.js"
 
 const path = window.location.pathname
 
@@ -75,3 +76,4 @@ new Accordion(
     'data-accordion-content',
     'burger__button'
 )
+new ThemeSwither('data-theme-button')

@@ -57,6 +57,18 @@
 
     background: url(../Image/Welcome/Welcome-1.jpg) no-repeat center;
     background-position: 0 45%;
+    position: relative;
+    overflow: hidden;
+}
+.welcome::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--welcome-bg-overlay); /* степень затемнения */
+    pointer-events: none;
+}
+.welcome > * {
+    z-index: 5;
 }
 .welcome__label {
     font-size: 13px;
@@ -65,6 +77,7 @@
     margin-bottom: 20px;
 }
 .welcome__title {
+    color: #000;
     margin-bottom: 20px;
 }
 .welcome__desc {
@@ -90,7 +103,7 @@
     max-width: 580px;
 
     border-radius: 25px;
-    background: var(--main-content-background);
+    background: var(--main-item-background);
 }
 .discount__image {
     position: absolute;
@@ -143,7 +156,7 @@
     width: 120px;
     height: 230px;
 
-    background: var(--main-content-background);
+    background: var(--main-item-background);
     font-weight: 600;
     padding: 25px;
     border-radius: 25px;
@@ -200,7 +213,7 @@
     height: 250px;
     padding: 0 20px;
     
-    background: var(--main-content-background);
+    background: var(--main-item-background);
     border-radius: 25px;
 }
 .dishes__info  {
@@ -240,8 +253,8 @@
     padding: 15px 15px;
 
     border-radius: 25px;
-    border: 1px solid #fff;
-    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--meal-groups-borders);
+    background: var(--meal-groups-background);
     backdrop-filter: blur(10px);
     z-index: 10;
 
@@ -267,7 +280,7 @@
     flex-wrap: wrap;
 }
 .meal-groups__list .main-btn {
-    background: #fff;
+    background: var(--meal-groups-button-bg);
     color: var(--primary-orange);
     border: 1px solid var(--primary-orange);
 }
@@ -301,7 +314,7 @@
     padding: 20px;
     height: 240px;
     width: 280px;
-    background: var(--main-content-background);
+    background: var(--main-item-background);
     border-radius: 25px;
 }
 .trending__label {
