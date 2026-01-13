@@ -61,17 +61,17 @@ class FormsValidation {
         let isFormValid = true
         let firstInvalidFieldInput = null
 
-        requiredInputElements.forEach((element) => {
-            const isFieldValid = this.validateField(element)
+        // requiredInputElements.forEach((element) => {
+        //     const isFieldValid = this.validateField(element)
 
-            if (!isFieldValid) {
-                isFormValid = false
+        //     if (!isFieldValid) {
+        //         isFormValid = false
 
-                if (!firstInvalidFieldInput) {
-                    firstInvalidFieldInput = element
-                }
-            }
-        })
+        //         if (!firstInvalidFieldInput) {
+        //             firstInvalidFieldInput = element
+        //         }
+        //     }
+        // })
         if (!isFormValid) {
             e.preventDefault()
             firstInvalidFieldInput.focus()
