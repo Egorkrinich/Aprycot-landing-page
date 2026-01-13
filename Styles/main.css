@@ -15,12 +15,10 @@
     --primary-svg: #000;
     /* Elements */
     --primary-input: #eeeeee;
-    --theme-button-bg: #e7e7e7;
+    --primary-grey-btn: #F5F5F5;
     /* Home page */
         /* burger menu */
     --burger-button-bg: #fff;
-        /* sidebar */
-    --sidebar-button-background: #F5F5F5;
         /* welcome */
     --welcome-bg-overlay: rgba(0, 0, 0, 0);
         /* meal groups */
@@ -45,12 +43,10 @@
     --primary-svg: #ffffff;
     /* Elements */
     --primary-input: #3a3a3a;
-    --theme-button-bg: #1b1b1b;
+    --primary-grey-btn: #1b1b1b;
     /* Home page */
         /* burger menu */
     --burger-button-bg: #2b2a2a;
-        /* sidebar */
-    --sidebar-button-background: #525252;
         /* welcome */
     --welcome-bg-overlay: rgba(0, 0, 0, 0.3);
         /* meal groups */
@@ -81,7 +77,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-text);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 a {
     color: var(--primary-link);
@@ -121,6 +117,7 @@ header {
     background: var(--main-item-background);
     z-index: 10;
     justify-content: space-between;
+    position: relative;
 }
 .left-side {
     display: flex;
@@ -135,7 +132,7 @@ header {
 .search__input {
     display: flex;
     position: relative;
-    padding: 0 30px;
+    padding: 0 20px;
     align-items: center;    
     z-index: 20;
 }
@@ -144,7 +141,7 @@ header {
     left: 45px;
 }
 .search__input input {
-    max-width: 300px;
+    width: 100%;
     height: 45px;
 
     padding: 0 40px;
@@ -169,21 +166,46 @@ header {
     height: 100%;
     margin-left: auto;
     padding: 0 30px;
+    position: relative;
+}
+.header-stuff__button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: var(--primary-grey-btn);
+    padding: 10px 15px;
+    border: 0;
+    transition: all 0.3s;
+}
+.header-stuff__button svg {
+    fill: var(--primary-grey);
+    transform: rotateZ(90deg);
+    transition: all 0.3s;
+}
+.header-stuff__button.active svg {
+    transform: rotateZ(270deg);
+}
+.header__stuff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-right: 16px;
 }
 .header__stuff-item {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 25px;
     height: 25px;
-    margin-right: 16px;
 }
 .header__stuff-item svg {
     cursor: pointer;
     fill: var(--primary-grey);
     transition: fill 0.3s;
 }
-.header__stuff-item:hover svg {
+.header__stuff-item:not(:last-child):hover svg {
     fill: var(--primary-orange);
 }
 .header__profile {
@@ -193,6 +215,7 @@ header {
 }
 .header-profile__image {
     width: 55px;
+    height: 55px;
 }
 .header-profile__name, 
 .header-profile__title {
@@ -225,7 +248,7 @@ header {
     height: 35px;
     border-radius: 50px;
     cursor: pointer;
-    background: var(--theme-button-bg);
+    background: var(--primary-grey-btn);
     position: relative;
 }
 .theme__container {
@@ -234,7 +257,7 @@ header {
     transition: transform 0.7s;
 }
 .theme__item--light svg {
-    fill: #000;
+    fill: var(--primary-orange);
 }
 .theme__item--dark svg {
     fill: #fff;
@@ -277,7 +300,7 @@ header {
     width: 40px;
 
     border-radius: 50%;
-    background: var(--sidebar-button-background);
+    background: var(--primary-grey-btn);
 }
 .sidebar__item .sidebar__link svg {
     fill: var(--primary-grey);
@@ -303,7 +326,7 @@ header {
 
     width: 400px;
     height: 100%;
-    background: var(--main-content-background);
+    background: var(--main-item-background);
     padding: 20px 15px;
     gap: 25px;
     box-sizing: border-box;
@@ -534,8 +557,6 @@ footer {
 }
 .footer__design {
     margin-top: 10px;
-    border-bottom: 1px solid var(--primary-grey);
-    padding-bottom: 5px;
 }
 .footer__credits a {
     color: var(--primary-orange);
@@ -790,7 +811,7 @@ main {
     object-fit: cover;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .mobile-only {
         display: block; 
     }
@@ -807,7 +828,7 @@ main {
         border: 0;
     }
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     .search__button {
         display: block;
     }
@@ -815,16 +836,31 @@ main {
         display: none;
         position: absolute;
         top: 65px;
-        background: var(--main-item-background);
+        left: 0;
+        width: 320px;
         height: 100px;
+        background: var(--main-item-background);
         border-radius: 20px;
-        box-shadow: 0 20px 10px #000;
+        box-shadow: 0 20px 10px #292929;
+        box-sizing: border-box;
     }
     .search__input.active {
         display: flex;
     }
 }
 @media (max-width: 750px) {
+    .header__logo {
+        width: 50px;
+        padding: 7px 15px;
+    }
+    .header-profile__image {
+        width: 38px;
+        height: 38px;
+    }
+
+    .header__interation {
+        padding: 0 15px;
+    }
     footer {
         height: 200px;
         justify-content: start;
@@ -836,32 +872,31 @@ main {
     }
 }
 @media (max-width: 600px) {
-    header {
-        height: 200px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .header__interation {
-        flex-direction: column-reverse;
-        gap: 20px;
-        padding: 0;
-    }
-    .search__input {
-        top: 180px;
-        left: 0;
-        padding: 0;
-    }
-    .search__input svg {
-        left: 15px;
-    }
-    .search__button {
-        margin: 0;
-    }
-    .left-side {
-        flex-direction: column;
-        gap: 15px;
-    }
     .cart {
         width: 320px;
+    }
+    .header-profile__info {
+        display: none;
+    }
+    .header-stuff__button {
+        display: flex;
+        margin-right: 16px;
+    }
+    .header__stuff {
+        flex-direction: column-reverse;
+        position: absolute;
+
+        padding: 5px 10px;
+        border-radius: 20px;
+
+        background: var(--main-item-background);
+        top: -1000%;
+        left: 5%;
+        z-index: 10;
+        transition: all 0.3s;
+        box-shadow: 0 10px 10px #4b4b4b
+    }
+    .header__stuff.active {
+        top: 120%;
     }
 }

@@ -138,13 +138,13 @@
 
 /* Types */
 
+
 .category {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
     align-items: center;
     justify-content: center;
+    gap: 40px;
     margin-bottom: 40px;
 }
 .category__card {
@@ -152,6 +152,7 @@
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
+    flex-shrink: 0;
 
     width: 120px;
     height: 230px;
@@ -195,8 +196,8 @@
 /* Dishes */
 
 .dishes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 100px 30px;
     max-width: 100%;
     margin-top: 130px;
@@ -204,19 +205,22 @@
 }
 .dishes__card {
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     box-sizing: border-box;
 
     width: 250px;
     height: 250px;
-    padding: 0 20px;
+    padding: 15px 20px;
     
     background: var(--main-item-background);
     border-radius: 25px;
 }
 .dishes__info  {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin-top: 50%;
 }
 .dishes__rating  {
@@ -226,10 +230,10 @@
 .dishes__rating .checked {
     color: #EA6A12;
 }
-.dishes__card .main-add-button {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
+.dishes__buy {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
 }
 .dishes__image {
     position: absolute;
@@ -309,6 +313,8 @@
     justify-content: center;
 }
 .trending__card {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     position: relative;
     padding: 20px;
@@ -330,7 +336,7 @@
     font-weight: 400;
     font-size: 13px;
     color: #959895;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .trending__detail .line {
     display: block;
@@ -339,9 +345,11 @@
     background: #959895;
     margin: 10px 0;
 }
+.trending__buy {
+    margin-top: auto;
+}
 .trending__card .main-cost {
     display: inline-block;
-    margin-top: 20px;
     font-weight: 600;
     color: #EA6A12;
     margin-right: 20px;
@@ -372,14 +380,6 @@
 
 @media (max-width: 1000px) {
     .Main-content--home {
-        grid-template-areas: 
-        "Welcome Discount"
-        "MenuCategory Categories"
-        "Trending";
-    }
-}
-@media (max-width: 850px) {
-    .Main-content--home {
         grid-template-columns: 1fr;
         justify-items: center;
         grid-template-areas: 
@@ -403,12 +403,66 @@
         margin-bottom: 100px;
     }
 }
-@media (max-width: 400px) {
-    .Main-content--home {
-        margin: 30px 0;
+@media (max-width: 800px) {
+    .trending__content {
+        gap: 50px;
+        padding: 0;
     }
     .trending__card {
-        width: 250px;
+        width: 240px;
+        height: 185px;
     }
-
+    .trending__image {
+        width: 130px;
+        height: 130px;
+    }
+    .trending__detail {
+        display: none;
+    }
+    .dishes__card {
+        align-items: center;
+        width: 200px;
+        max-height: 230px;
+    }
+    .dishes__info { 
+        text-align: center;
+        align-items: center;
+    }
+    .dishes__image {
+        width: 130px;
+        height: 130px;
+    }
+    .welcome {
+        background-position: 15% 45%;
+    }
+}
+@media (max-width: 450px) {
+    .Main-content--home {
+        margin: 0;
+        gap: 20px;
+        padding-top: 10px;
+    }
+    .dishes__title,
+    .trending__title {
+        font-size: 16px;
+    }
+    .welcome {
+        border-radius: 0;
+        padding-inline: 20px;
+        align-items: center;
+        text-align: center;
+        height: 300px;
+    }
+    .discount {
+        height: 350px;
+        justify-content: end;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .discount__image {
+        max-width: 350px;
+        top: -1%;
+    }
 }

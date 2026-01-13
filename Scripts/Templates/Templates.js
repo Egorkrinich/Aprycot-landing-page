@@ -11,8 +11,10 @@ export const Templates = {
                 <li class="line"></li>
                 <li class="trending__persons">${data.persons} persons</li>
             </ul>
+            <div class="trending__buy">
             <p class="main-cost">$${data.cost}</p>
             <button class="main-add-button">+</button>
+            </div>
             <div class="trending__image main-dish__image">
                 <img src="${data.img}" loading="lazy" alt="${data.title}">
             </div>
@@ -36,8 +38,10 @@ export const Templates = {
                     <i class="fa-solid fa-star checked"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
+                <div class="dishes__buy">
                 <p class="main-cost">$${data.cost}</p>
                 <button class="main-add-button">+</button>
+                </div>
             </div>
         </div>        
         `

@@ -32,11 +32,22 @@ export default class Menu {
         this.isMenuActive = !this.isMenuActive
         const eventStatus = status === 'open'
         const array = [this.menu, this.button, this.overlay]
+        this.closeMenus()
         array.forEach((el) => {
             el?.classList.toggle('active', eventStatus)
         })
         if (this.menu.dataset.menu === "cart" && eventStatus) {
             document.dispatchEvent(new CustomEvent('cart-updated'))
+        }
+    }
+    closeMenus() {
+        const menu = document.querySelector('[data-menu].active')
+        if (menu === this.menu) return
+        if (menu) {
+            const button = document.querySelector(`[data-burger-btn=${menu.dataset.menu}]`)
+            menu.classList.remove('active')
+            button.classList.remove('active')
+            this.overlay?.classList.remove('active')
         }
     }
 }
